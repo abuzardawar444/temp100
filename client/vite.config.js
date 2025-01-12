@@ -8,7 +8,7 @@ export default defineConfig({
     //this method forwards all the API requests to the target server, here server 5100/api. So, we change the origin and modify the path.
     proxy: {
       "/api": {
-        target: "http://localhost:5100/api",
+        target: "http://localhost:5000/api",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
